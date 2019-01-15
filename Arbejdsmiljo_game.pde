@@ -1,30 +1,30 @@
 Star[] stars = new Star[1000];
-TasteIndput currentKeyInput; 
+Taster taster1;
+Krop spiller;
 //SpilSystem System;
-boolean paused; 
+//boolean paused; 
 //PFont smallFont, largeFont;
 
-int x = 0;
+float FPS = 120;
 
 void setup() {
-  fullScreen();
-  background(0);
-  noStroke();
-  fill(200);
+  background(255);
+  fullScreen(P2D, 1);
+  frameRate(FPS);
+  cursor();
+  noCursor();
+  String s = "BigPulse";
+  fill(0);
+  text(s, (width/2)-1000, (height/2)-1000, 240, 90);
   for (int i = 0; i <stars.length; i++) {
     stars [i] = new Star();
   }
 }
 
 void draw() {
-  rect (x, height*0.2, 1, height*0.6);
-  x=x+2 ;
-  
-  speed = map(200, 0, width, 0, 50);
-  background (0);
-  translate(width/2, height/2);
-  for (int i = 0; i <stars.length; i++) {
-    stars[i].update();
-      stars[i].show();
-  }
+  spiller.display();
+  spiller.checkEdges();
+
+}
+
 }
