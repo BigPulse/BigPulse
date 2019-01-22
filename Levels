@@ -2,9 +2,6 @@ int level;
  
 void draw(){
   switch(level) {
-    case 0: 
-      titlescreen();
-      break;
     case 1:
       level1();
       break;
