@@ -13,11 +13,6 @@ class Taster {
     }
     //    if (keyCode =='a' || keyCode == 'A') {
     //    shoot = true;
-    //}
-    if (keyPressed) {
-      if (keyCode == ESC ) {
-        exit();
-      }
-    }
+    //
   }
 }
