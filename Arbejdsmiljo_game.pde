@@ -1,30 +1,41 @@
-Star[] stars = new Star[1000];
-Taster taster1;
-Krop spiller;
+import g4p_controls.*;
+
+//Star[] stars = new Star[1000];
+Taster T;
+Krop k;
 //SpilSystem System;
 //boolean paused; 
 //PFont smallFont, largeFont;
-
+import g4p_controls.*;
+import java.awt.Font;
+//PImage spaceship;
 float FPS = 120;
+float speed;
+PVector location;
+float r;
+
+boolean lvl1 = false;
+
+
 
 void setup() {
-  background(255);
-  fullScreen(P2D, 1);
+  background(0);
+  size(1000, 1000, P2D);
   frameRate(FPS);
-  cursor();
-  noCursor();
-  String s = "BigPulse";
-  fill(0);
-  text(s, (width/2)-1000, (height/2)-1000, 240, 90);
-  for (int i = 0; i <stars.length; i++) {
-    stars [i] = new Star();
+  k = new Krop();
+
+    createGUI();
+    customGUI();
   }
-}
+
 
 void draw() {
-  spiller.display();
-  spiller.checkEdges();
+  k.display();
+  k.checkEdges();
+  lvl1 = true;
+
 
 }
 
+public void customGUI(){
 }
